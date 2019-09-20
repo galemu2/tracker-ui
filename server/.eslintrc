@@ -1,0 +1,13 @@
+{
+    "env": {
+        "node": true
+    },
+    "rules": {
+        "no-console": "off",
+        "import/extensions": "off",
+        "react/jsx-indent": [
+            1,
+            4
+        ],
+    }
+}

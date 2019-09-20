@@ -1,0 +1,21 @@
+{
+    "env": {
+        "browser": true,
+    },
+    "rules": {
+        "indent": 0,
+        "import/extensions": [
+            "error",
+            "always",
+            {
+                "ignorePackages": true
+            }
+        ],
+        "react/prop-types": "off",
+        "react/jsx-indent": [
+            1,
+            4
+        ],
+        "react/jsx-indent-props": 0,
+    }
+}
