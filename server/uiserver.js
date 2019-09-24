@@ -36,8 +36,8 @@ app1.use(staticMidelware);
 
 const apiProxyTarget = process.env.API_PROXY_TARGET;
 if (apiProxyTarget) {
-    app1.use('/graphql', proxy({ target: apiProxyTarget }));
-    app1.use('/auth', proxy({ target: apiProxyTarget }));
+    app1.use('/graphql', proxy({ target: apiProxyTarget, changeOrigin: true }));
+    app1.use('/auth', proxy({ target: apiProxyTarget, changeOrigin: true }));
 }
 
 if (!process.env.UI_API_ENDPOINT) {
