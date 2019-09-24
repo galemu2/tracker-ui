@@ -3,6 +3,10 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
+    "engines": {
+        "node": "10.x",
+        "npm": "6.x"
+    },
     "scripts": {
         "#compile": "Generates JS bundles for production. Use with start.",
         "compile": "webpack --mode production",
@@ -18,7 +22,8 @@
         "mongo-start": "sudo service mongod start",
         "mongo-stop": "sudo service mongod stop",
         "#lint": "Runs ESLint on all relevant files",
-        "lint": "eslint server src browser --ext js,jsx"
+        "lint": "eslint server src browser --ext js,jsx",
+        "heroku-postbuild": "npm run compile && ln -sf ../node_modules/bootstrap/dist public/bootstrap"
     },
     "keywords": [],
     "author": "",
